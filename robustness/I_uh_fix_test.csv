@@ -1,0 +1,7 @@
+gauge_id,group,n_in_mc,n_rerun,behavioural_duamel,behavioural_integrated,best_kge_integrated,median_kge_integrated,median_kge_change
+hysets_14241490,zero_flow,40813,10000,0,3,0.739532,-0.389884,
+hysets_14241490,flowing,19187,10000,223,193,0.824351,-0.12302,-0.00657
+GRDC_6854570,zero_flow,40895,10000,0,1,0.555837,-0.757822,
+GRDC_6854570,flowing,19105,10000,111,102,0.759948,-0.689328,-0.004268
+camels_11124500,zero_flow,40807,10000,0,0,0.361957,-0.570811,
+camels_11124500,flowing,19193,10000,27,23,0.76399,-0.392716,-0.003571

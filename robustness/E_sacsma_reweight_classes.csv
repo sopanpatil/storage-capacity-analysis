@@ -1,0 +1,11 @@
+variant,prior,n,assessed,fails_screen,few_behavioural,not_classifiable,unidentifiable,consistent,inconsistent,unidentifiable_share
+class,unweighted,6144,3544,1728,838,34,2202,709,633,0.621332
+class,weighted,6144,3544,1728,838,34,2945,360,239,0.830982
+class_ci,unweighted,6144,3544,1728,838,34,1695,868,981,0.478273
+class_ci,weighted,6144,3544,1728,838,34,2315,779,450,0.653217
+class_nosoil,unweighted,6144,3429,1728,838,149,2999,179,251,0.874599
+class_nosoil,weighted,6144,3429,1728,838,149,3285,67,77,0.958005
+class_fixed10,unweighted,6144,3544,1728,838,34,50,1251,2243,0.014108
+class_fixed10,weighted,6144,3544,1728,838,34,1439,936,1169,0.406038
+class_halfprior,unweighted,6144,3544,1728,838,34,3511,13,20,0.990688
+class_halfprior,weighted,6144,3544,1728,838,34,3377,122,45,0.952878

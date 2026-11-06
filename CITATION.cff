@@ -1,0 +1,70 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper below."
+title: "storage-capacity-analysis: Analysis code and per-catchment results for testing calibrated storage capacity in lumped rainfall-runoff models"
+type: software
+authors:
+  - family-names: Patil
+    given-names: Sopan D.
+    orcid: "https://orcid.org/0000-0002-8575-5220"
+    affiliation: "Bangor University"
+  - family-names: Jahanshahi
+    given-names: Afshin
+    orcid: "https://orcid.org/0000-0003-0221-0055"
+    affiliation: "University of Galway"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/sopanpatil/storage-capacity-analysis"
+keywords:
+  - hydrology
+  - large-sample hydrology
+  - rainfall-runoff modelling
+  - root-zone storage capacity
+  - parameter identifiability
+  - Caravan
+  - HBV
+  - GR6J
+  - SAC-SMA
+references:
+  - type: software
+    title: "hbv-model: A standalone HBV rainfall-runoff model and SCE-UA calibration implementation"
+    authors:
+      - family-names: Patil
+        given-names: Sopan D.
+      - family-names: Dallison
+        given-names: Richard J. H.
+      - family-names: Jahanshahi
+        given-names: Afshin
+    doi: "10.5281/zenodo.23245621"
+    version: "1.2.0"
+  - type: software
+    title: "GRsuite: an unofficial Python port of the airGR suite of GR rainfall-runoff models"
+    authors:
+      - family-names: Bouhafa
+        given-names: Najim
+    version: "1.1.1"
+    repository-code: "https://github.com/Najim33/GRsuite"
+  - type: article
+    title: "Caravan - A global community dataset for large-sample hydrology"
+    authors:
+      - family-names: Kratzert
+        given-names: Frederik
+      - family-names: Nearing
+        given-names: Grey
+      - family-names: Addor
+        given-names: Nans
+    journal: "Scientific Data"
+    volume: 10
+    year: 2023
+    doi: "10.1038/s41597-023-01975-w"
+# preferred-citation:
+#   type: article
+#   title: "Can calibrated soil storage capacity in conceptual rainfall-runoff models be treated as catchment storage? Evidence from 6,144 Caravan catchments"
+#   authors:
+#     - family-names: Patil
+#       given-names: Sopan D.
+#       orcid: "https://orcid.org/0000-0002-8575-5220"
+#     - family-names: Jahanshahi
+#       given-names: Afshin
+#       orcid: "https://orcid.org/0000-0003-0221-0055"
+#   year: 2026
+#   # doi: "10.xxxx/xxxxxxxxxx"    # add once the article DOI is assigned

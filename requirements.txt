@@ -1,0 +1,25 @@
+# Direct dependencies, at the versions used for the results (Python 3.12.11).
+# hbv-model v1.2.0 is not on PyPI: see README.md.
+numpy==2.2.6
+pandas==2.3.0
+scipy==1.15.2
+pyarrow==19.0.1          # parquet I/O
+matplotlib==3.10.3       # figures
+Cartopy==0.24.0          # Figure 1 map
+PyYAML==6.0.2            # config.yaml
+statsmodels==0.14.4      # src/rq4_where.py
+scikit-learn==1.7.0      # src/prior_agreement_tests.py
+numba==0.61.2            # hbv-model and src/flex_model.py
+grsuite==1.1.1           # GR6J and GR4J
+
+# Only for the steps that read the raw data and benchmark inputs
+netCDF4==1.7.2
+xarray==2025.7.0
+geopandas==1.1.1
+shapely==2.1.1
+rasterio==1.4.3
+exactextract==0.3.0
+
+# Only for the Earth Engine extraction
+earthengine-api==1.7.47
+google-api-python-client==2.201.0

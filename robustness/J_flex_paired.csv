@@ -1,0 +1,21 @@
+comparison,benchmark,n,rho_flex,flex_lo,flex_hi,rho_hbv,hbv_lo,hbv_hi,diff,diff_lo,diff_hi,rule_intervals_separate,median_ratio_flex,median_ratio_hbv,rule_identifiable_in_most_pairs
+FLEX_so - HBV_so,climate,224,0.201919,0.085892,0.304112,0.327347,0.215605,0.428703,-0.125428,-0.204101,-0.050806,False,1.496294,2.300995,
+FLEX_so - HBV_so,soil,384,-0.080578,-0.175368,0.015342,-0.056043,-0.140014,0.034442,-0.024534,-0.095719,0.042444,False,2.78754,4.749691,
+FLEX_so - HBV_so,stocker,394,0.217019,0.126855,0.305584,0.20976,0.117991,0.296225,0.007259,-0.067491,0.087117,False,1.470155,2.349602,
+FLEX_so - HBV_so,zhao,358,0.223375,0.128674,0.309248,0.277836,0.188538,0.354404,-0.054462,-0.119154,0.009654,False,0.880827,1.582364,
+FLEX_so - HBV_so,gao,220,0.617724,0.528271,0.701528,0.679019,0.60829,0.743306,-0.061295,-0.131036,0.009296,False,1.174884,1.963113,
+FLEX_so - HBV_so,unidentifiable class,396,0.818182,,,0.712121,,,0.106061,,,,,,False
+FLEX_so - HBV_so,unidentifiable class_ci,396,0.805556,,,0.671717,,,0.133838,,,,,,False
+FLEX_so - HBV_so,unidentifiable class_nosoil,385,0.958442,,,0.922078,,,0.036364,,,,,,False
+FLEX_so - HBV_so,unidentifiable class_fixed10,396,0.709596,,,0.462121,,,0.247475,,,,,,False
+FLEX_so - HBV_so,unidentifiable class_halfprior,396,0.800505,,,0.866162,,,-0.065657,,,,,,False
+FLEX_mo - HBV_mo,climate,210,0.226883,0.110559,0.339659,0.415863,0.30753,0.513299,-0.18898,-0.266873,-0.108551,False,1.273242,1.914401,
+FLEX_mo - HBV_mo,soil,368,-0.086251,-0.172048,0.001629,-0.037248,-0.126239,0.046905,-0.049003,-0.113042,0.014708,False,2.499932,4.205705,
+FLEX_mo - HBV_mo,stocker,378,0.225855,0.131923,0.310306,0.281863,0.190907,0.359341,-0.056009,-0.125216,0.015718,False,1.187125,2.111625,
+FLEX_mo - HBV_mo,zhao,343,0.225679,0.137199,0.309384,0.304963,0.216105,0.397754,-0.079284,-0.140496,-0.018477,False,0.727734,1.398115,
+FLEX_mo - HBV_mo,gao,206,0.688233,0.608017,0.75147,0.742735,0.680611,0.800964,-0.054503,-0.114925,0.004646,False,1.148541,1.7619,
+FLEX_mo - HBV_mo,unidentifiable class,365,0.780822,,,0.706849,,,0.073973,,,,,,False
+FLEX_mo - HBV_mo,unidentifiable class_ci,365,0.747945,,,0.687671,,,0.060274,,,,,,False
+FLEX_mo - HBV_mo,unidentifiable class_nosoil,355,0.952113,,,0.912676,,,0.039437,,,,,,False
+FLEX_mo - HBV_mo,unidentifiable class_fixed10,365,0.632877,,,0.479452,,,0.153425,,,,,,False
+FLEX_mo - HBV_mo,unidentifiable class_halfprior,365,0.690411,,,0.780822,,,-0.090411,,,,,,False

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+
+# This machine's paths and the data they point to (see config.yaml)
+config.local.yaml
+/external/
+
+# Compiled SAC-SMA library (models/sacsma/build.sh)
+models/sacsma/build/
+
+# SLURM logs
+slurm/logs/
+
+# Rendered figures and tables: figures/*.py write them, and the published copies live with the paper
+figures/*.png
+figures/*.pdf
+figures/si_tables.tex

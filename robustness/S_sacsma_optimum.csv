@@ -1,0 +1,2 @@
+quantity,n,median_kge_cal_ref,median_kge_cal_new,median_kge_cal_change,share_new_better_by_0_01,share_new_worse_by_0_01,median_kge_val_change,spearman_capacity,median_abs_log10_ratio,share_within_10pct,share_beyond_factor_2,median_log10_ratio,rho_main_climate,rho_main_soil,rho_main_stocker,rho_main_zhao,rho_so_climate,rho_so_soil,rho_so_stocker,rho_so_zhao
+UZTWM+LZTWM,397,0.808995,0.820259,0.006205,0.38539,0.0,0.001563,0.817413,0.045839,0.471033,0.123426,-0.00042,-0.342908,0.04136,-0.253961,-0.069613,-0.225945,-0.003893,-0.15008,0.007552

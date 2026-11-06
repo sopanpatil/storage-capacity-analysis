@@ -1,0 +1,15 @@
+item,value
+prior_zero_share_duamel,0.68155
+prior_zero_share_rule,0.68155
+rule_agrees_with_duamel,1.0
+min_routed_volume_flowing,0.999999
+shape_1_working_scale_min_d,0.096999
+shape_1_working_scale_max_d,150.0
+shape_2_working_scale_min_d,0.076999
+shape_2_working_scale_max_d,76.206492
+shape_3_working_scale_min_d,0.065
+shape_3_working_scale_max_d,17.452884
+shape_4_working_scale_min_d,0.057
+shape_4_working_scale_max_d,7.421951
+shape_5_working_scale_min_d,0.051
+shape_5_working_scale_max_d,4.146972

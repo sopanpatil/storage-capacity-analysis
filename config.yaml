@@ -1,0 +1,87 @@
+# Paths and run settings. Relative paths are relative to the repository root.
+# To use your own locations, put overrides in config.local.yaml (same structure, not tracked).
+
+paths:
+  # Raw data (fetch with src/download_caravan.sh, then src/extract_caravan.sh)
+  caravan: external/raw/caravan_v1.6/Caravan-nc
+  grdc: external/raw/grdc_caravan_v0.6/GRDC_Caravan_extension_nc
+  # Small derived tables (catalogue, duplicates, pilot list), tracked in this repository
+  catalog: data/catalog
+  # Calibration and Monte Carlo outputs (regenerable, large)
+  runs: external/runs
+  # hbv-model v1.2.0 (doi:10.5281/zenodo.23245621), checked out at tag v1.2.0
+  hbv_model: ../hbv-model
+  # Benchmark rasters (src/prepare_benchmarks.py, src/download_ssebop.sh)
+  benchmarks: external/benchmarks
+  # Outputs of the robustness runs (src/robustness_calibrate.py, src/robustness_flex.py)
+  workspace: external/workspace
+
+forcing:
+  precip: total_precipitation_sum
+  pet: potential_evaporation_sum_FAO_PENMAN_MONTEITH
+  tmin: temperature_2m_min
+  tmean: temperature_2m_mean
+  tmax: temperature_2m_max
+  aridity_attr: aridity_FAO_PM
+
+# Optional alternative forcing (src/calibrate.py --forcing; not used for the results here): precipitation, PET and mean
+# temperature replaced from CAMELS-GB v2 (Caravan's camelsgb streamflow is CAMELS-GB's own, so unchanged);
+# Tmin/Tmax shifted by the mean-temperature difference (CAMELS-GB has daily mean only). pet = no interception.
+forcing_sources:
+  camelsgb_cehgear:   # CAMELS-GB standard set; ends 2019-12-31
+    dir: external/CAMELS-GBv2_Data/daily
+    precip: precipitation_cehgear
+    pet: pet_chess
+    tmean: temperature_chess
+  camelsgb_haduk:     # ends 2022-09-30
+    dir: external/CAMELS-GBv2_Data/daily
+    precip: precipitation_haduk
+    pet: pet_hydrope
+    tmean: temperature_haduk
+
+dedup:
+  id_match_max_km: 5          # nat_id / gauge-id match also needs gauges this close
+  spatial_max_km: 2           # location-only match: gauges this close ...
+  spatial_max_area_diff: 0.10 # ... and areas within this fraction
+  min_overlap_days: 365       # diagnostic flow check needs this many common days
+  min_flow_r: 0.95            # diagnostic only: flag pairs whose flows disagree
+  # keep order when duplicates are found (lower wins)
+  source_priority: {camels: 0, GRDC: 2, default: 1}
+
+record:
+  complete_year_frac: 0.90    # calendar year counts as complete with this fraction of valid days
+  window: [1981, 2023]        # analysis window; each catchment's record is split within it
+  calibration_fraction: 0.6667  # first 2/3 of valid days in the window = calibration, rest = validation
+  warmup_years: 5
+
+screen:
+  # Applied before calibration; the KGE >= 0.5 screen
+  # comes after calibration
+  area_km2: [50, 5000]
+  min_complete_years: 15             # complete years in the 1981-2023 window
+  exclude_grdc_quality: [Low]
+  max_runoff_ratio: 1.0
+  max_glacier_pct: 5.0               # HydroATLAS gla_pc_sse
+  max_dor_x10: 100                   # HydroATLAS dor_pc_pva is percent x 10; exclude >= 100 (10%)
+
+pilot:
+  aridity_bins: [0, 0.5, 1, 2, .inf]
+  snow_bins: [0, 0.05, 0.2, 0.4, 1.0]
+  per_cell: 3
+  seed: 20261008
+
+calibration:
+  # Optimisers: each model's own (SCE-UA for HBV and SAC-SMA, airGR's Michel algorithm for GR6J).
+  sce_complexes: 7
+  sce_maxiter: 15000
+  # Latin hypercube samples per catchment (Lane et al. 2019 used 10,000). SAC-SMA gets 6x because
+  # 68% of Newman et al.'s routing prior gives zero routed flow at a daily step
+  # GR6J gets 15x because its exchange parameters (X2, X5) leave a very narrow behavioural region
+  monte_carlo_samples: {HBV: 10000, GR6J: 150000, SACSMA: 60000}
+  behavioural_kge: 0.5
+
+earth_engine:
+  # Your Google Earth Engine project (src/gee_extract.py, src/gee_export.py; earthengine authenticate)
+  project: YOUR-EARTH-ENGINE-PROJECT
+  mod16: MODIS/061/MOD16A2GF          # C6.1 gap-filled; MODIS/061/MOD16A2 in EE starts only in 2021
+  era5land_daily: ECMWF/ERA5_LAND/DAILY_AGGR

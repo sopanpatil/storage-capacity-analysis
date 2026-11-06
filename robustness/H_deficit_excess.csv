@@ -1,0 +1,4 @@
+model,n,exceed,exceed_share,gumbel,other_stores,max_srmax_over_capacity,gumbel_median_sr20_over_capacity,gumbel_median_sr20_over_srmax,all_median_sr20_over_srmax
+GR6J,4778,498,0.104228,498,0,0.991237,1.023926,1.066384,1.068352
+HBV,4370,323,0.073913,323,0,1.0,1.038403,1.09332,1.061777
+SACSMA,4416,219,0.049592,146,73,18.094905,1.0344,1.088053,1.054641

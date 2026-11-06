@@ -1,0 +1,15 @@
+stratum,candidates,climate_eligible,selected
+"aridity [0.0, 0.5), snow [0.0, 0.05)",172,True,45
+"aridity [0.0, 0.5), snow [0.05, 0.2)",67,True,45
+"aridity [0.0, 0.5), snow [0.2, 0.4)",275,False,25
+"aridity [0.0, 0.5), snow [0.4, 1.0)",156,False,25
+"aridity [0.5, 1.0), snow [0.0, 0.05)",747,True,45
+"aridity [0.5, 1.0), snow [0.05, 0.2)",257,True,45
+"aridity [0.5, 1.0), snow [0.2, 0.4)",481,False,25
+"aridity [0.5, 1.0), snow [0.4, 1.0)",193,False,25
+"aridity [1.0, 2.0), snow [0.0, 0.05)",104,True,45
+"aridity [1.0, 2.0), snow [0.05, 0.2)",7,True,7
+"aridity [1.0, 2.0), snow [0.2, 0.4)",23,False,23
+"aridity [1.0, 2.0), snow [0.4, 1.0)",35,False,25
+"aridity [2.0, inf), snow [0.0, 0.05)",14,False,14
+"aridity [2.0, inf), snow [0.05, 1.0)",3,False,3
