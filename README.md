@@ -152,4 +152,5 @@ Code: MIT (see [`LICENSE`](LICENSE)). Tables in `data/` and `robustness/`: CC BY
 [`data/README.md`](data/README.md)). `third_party/` keeps the licences of its authors (see
 [`third_party/README.md`](third_party/README.md)), including GPL-2.0-or-later for `grsuite`.
 If you use this work, cite the software and the paper, as [`CITATION.cff`](CITATION.cff) sets
-out.
+out. The software is archived on Zenodo: doi:[10.5281/zenodo.24283590](https://doi.org/10.5281/zenodo.24283590)
+(all versions; v1.0.0 is doi:[10.5281/zenodo.24283591](https://doi.org/10.5281/zenodo.24283591)).
